@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 //import data
 import { navData } from "../../data";
 import Login from "./Login";
-const AccountBtns = () => {
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+const AccountBtns = ({ toggleDarkMode, isDarkMode }) => {
   return (
     <nav className="flex items-center gap-11">
       <ul className="flex gap-x-8">
@@ -16,6 +17,11 @@ const AccountBtns = () => {
             </li>
           );
         })}
+        <DarkModeSwitch
+          checked={isDarkMode}
+          onChange={toggleDarkMode}
+          size={24}
+        />
       </ul>
       <Login />
     </nav>

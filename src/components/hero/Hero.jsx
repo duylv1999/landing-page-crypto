@@ -39,11 +39,11 @@ const Hero = () => {
             billion in transactions.
           </p>
           <button
-            className="bg-blue-600  px-6 py-2 rounded-full text-white text-sm lg:h-16 lg:text-base font-bold gap-x-6"
+            className="bg-blue-600  px-6 py-2 rounded-full text-white text-sm lg:h-16 lg:text-base font-bold gap-x-6 group dark:hover:bg-blue-700"
             data-aos="fade-down"
             data-aos-delay="700"
           >
-            <div className="flex items-center justify-betweeen gap-2 bg-blue-600 hover:bg-blue-700">
+            <div className="flex items-center justify-betweeen gap-2 bg-blue-600 hover:bg-blue-700 dark:group-hover:bg-blue-700">
               Try for Free
               <IoIosArrowDroprightCircle className="text-2xl lg:text-3xl" />
             </div>

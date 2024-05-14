@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 //adding up componenents
 import Logo from "../../assets/img/ethereum.png";
-import Nav from "../nav/Nav";
 import AccountBtns from "../button/AccountBtns";
 
 //import icons
 import { CgMenuRight, CgmenuRight } from "react-icons/cg";
 
-const Header = ({ setNavMobile }) => {
+const Header = ({ setNavMobile, toggleDarkMode, isDarkMode }) => {
   //to open open drawer
   const handleClick = () => {
     setNavMobile(true);
@@ -28,11 +27,16 @@ const Header = ({ setNavMobile }) => {
         </a>
         {/* Nav butttons */}
         <div className="hidden lg:flex gap-x-[55px]">
-          <Nav />
-          <AccountBtns />
+          <AccountBtns
+            toggleDarkMode={toggleDarkMode}
+            isDarkMode={isDarkMode}
+          />
         </div>
         {/* Open nav button */}
-        <div onClick={handleClick} className="lg:hidden cursor-pointer">
+        <div
+          onClick={handleClick}
+          className="lg:hidden cursor-pointer dark:text-white"
+        >
           <CgMenuRight className="text-2xl" />
         </div>
       </div>
